@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% load static%}
+    {% for post in posts%}
+    <p>
+      <strong>{{post.author}} dodał {{post.created_data}}</strong>
+    </p>
+    <p>
+       <a href="{% url 'post_detail' post.pk %}"> <strong><i>{{post.title}}</i></strong></a>
+    </p>
+    <p>
+   
+    </p>
+    {% endfor %}
+{% endblock %}
